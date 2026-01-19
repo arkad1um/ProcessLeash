@@ -1,7 +1,7 @@
 // Copyright (C) 2026 ProcessLeash contributors
 // Licensed under the GNU General Public License v3.0
 
-// swift-tools-version: 6.2
+// swift-tools-version: 6.1
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
