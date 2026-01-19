@@ -5,11 +5,12 @@ import XCTest
 @testable import ProcessLeash
 
 final class ProcessLeashTests: XCTestCase {
+    @MainActor
     func testResetAllResetsPercentToDefault() {
         let model = AppModel()
-        let app = RunningApp(id: 1234, name: "TestApp", icon: nil)
+        let app = RunningApp(id: 1234, name: "TestApp", icon: nil, bundleIdentifier: nil)
 
-        let limiter = model.limiter(for: app.id)
+        let limiter = model.limiter(for: app)
         limiter.percent = 42
 
         model.resetAllToDefault()
